@@ -8,11 +8,11 @@ from web3.providers.websocket import WebsocketProvider
 from web3 import Web3
 from solc import compile_standard
 with open("Contract.sol") as c:
-contractText=c.read()
+ contractText=c.read()
 with open(".pk") as pkfile:
-privateKey=pkfile.read()
+ privateKey=pkfile.read()
 with open(".infura") as infurafile:
-infuraKey=infurafile.read()
+ infuraKey=infurafile.read()
 # Solidity source code
 compiled_sol = compile_standard({
      "language": "Solidity",

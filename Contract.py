@@ -81,7 +81,7 @@ greeter = W3.eth.contract(
 print("Output from greet()")
 print(greeter.functions.greet().call())
 nonce = W3.eth.getTransactionCount(address1)
-tx_dict = greeter.functions.setGreeting('Hahaha').buildTransaction({
+tx_dict = greeter.functions.setGreeting('Letter of Credit issued. This Smart Contract was deployed by Dwaipayan Sinha. ID 10565195').buildTransaction({
   'chainId': 3,
   'gas': 1400000,
   'gasPrice': w3.toWei('40', 'gwei'),

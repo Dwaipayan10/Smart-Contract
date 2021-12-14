@@ -1,4 +1,4 @@
-print ("Hello World!")
+print ("Letter Of Credit")
 import time
 import json
 import web3
@@ -78,7 +78,7 @@ greeter = W3.eth.contract(
   address=tx_receipt.contractAddress,
   abi=abi
 )
-print("Output from greet()")
+print("Parties involved in the Smart Contract()")
 print(greeter.functions.greet().call())
 nonce = W3.eth.getTransactionCount(address1)
 tx_dict = greeter.functions.setGreeting('Letter of Credit issued. This Smart Contract was deployed by Dwaipayan Sinha. ID 10565195').buildTransaction({

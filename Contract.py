@@ -66,13 +66,13 @@ while tx_receipt is None and (count < 300):
   try:
     tx_receipt = W3.eth.getTransactionReceipt(result)
   except:
-    print('.',end='')
+    print('.')
 
 if tx_receipt is None:
   print (" {'status': 'failed', 'error': 'timeout'} ")
 #diagnostics
 #print (tx_receipt)
-print("\nContract address is:",tx_receipt.contractAddress)
+print("Contract address is:",tx_receipt.contractAddress)
 
 greeter = W3.eth.contract(
   address=tx_receipt.contractAddress,
@@ -99,13 +99,13 @@ while tx_receipt is None and (count < 300):
   try:
     tx_receipt = W3.eth.getTransactionReceipt(result)
   except:
-    print('.',end='')
+    print('.')
 
 if tx_receipt is None:
   print (" {'status': 'failed', 'error': 'timeout'} ")
 
 #tx_hash = greeter.functions.setGreeting('Nihao').transact({"from":account1.address})
 #tx_receipt = w3.eth.waitForTransactionReceipt(tx_hash)
-print("\nOutput from greet()")
+print("Output from greet()")
 print(greeter.functions.greet().call({"from":account1.address}))
 #'Nihao'
